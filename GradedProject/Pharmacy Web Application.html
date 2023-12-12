@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      header {
+        background-color: rgb(67, 62, 62);
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: xx-large;
+        font-weight: bolder;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        position: relative;
+        bottom: 0%;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      #navi {
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+      }
+      .menu {
+        background-color: grey;
+        margin: 0%;
+      }
+      .menu li {
+        display: inline-block;
+        padding: 10px;
+      }
+      .menu li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+      }
+      .menu li a:hover {
+        background-color: black;
+      }
+      .dropdown {
+        display: inline-block;
+        position: relative;
+      }
+      .dropdown-con {
+        display: none;
+        position: absolute;
+        background-color: whitesmoke;
+        min-width: 160px;
+        z-index: 1;
+      }
+      .dropdown-con a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown:hover .dropdown-con {
+        display: block;
+      }
+      .dropdown .dropdown-con a {
+        color: steelblue;
+        background-color: white;
+      }
+      .dropdown .dropdown-con a:hover {
+        background-color: gainsboro;
+        padding: 10px;
+      }
+      #img_section {
+        margin: 3px;
+        height: 400px;
+        min-height: 300px;
+        text-align: center;
+        background-color: rgb(163, 228, 228);
+        border: 5px solid steelblue;
+        animation-name: image-change;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes image-change {
+        0% {
+          background-image: url(Images/Animation/ani1.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-size: cover;
+        }
+        25% {
+          background-image: url(Images/Animation/ani2.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-size: cover;
+        }
+        50% {
+          background-image: url(Images/Animation/ani3.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-size: cover;
+        }
+        75% {
+          background-image: url(Images/Animation/ani4.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-size: cover;
+        }
+        100% {
+          background-image: url(Images/Animation/ani5.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-size: cover;
+        }
+      }
+
+      .product {
+        padding: 5px;
+        width: 14%;
+        min-width: 140px;
+        min-height: 180px;
+        margin: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 3px;
+        background-color: rgb(243, 243, 253);
+        box-shadow: 5px 5px 10px gainsboro;
+      }
+      .product:hover {
+        width: 15%;
+        height: 185px;
+      }
+      .product > h4,
+      .product > p {
+        margin: 0%;
+      }
+      .product > p {
+        font-size: 14px;
+        color: rgb(43, 124, 230);
+      }
+      .product img {
+        width: 98%;
+        height: 100px;
+      }
+      .product button {
+        width: 100%;
+        background-color: lavender;
+        font-size: 16px;
+        border: 1px solid blue;
+        color: orange;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .product button:active {
+        background-color: rgb(250, 234, 230);
+        border: 1px solid rgb(0, 255, 76);
+      }
+      .main {
+        padding-left: 20px;
+      }
+      #foot {
+        bottom: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Pharmacy</header>
+    <section id="navi">
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Our Medicines</a>
+            <div class="dropdown-con">
+              <a href="#">Fever</a>
+              <a href="#">Muscle Pains</a>
+              <a href="#">Cold & Cough</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Health Care</a>
+            <div class="dropdown-con">
+              <a href="#">Baby Care</a>
+              <a href="#">Skin Care</a>
+              <a href="#">Home Care</a>
+              <a href="#">Personal Care</a>
+              <a href="#">Pet Care</a>
+            </div>
+          </li>
+          <li><a href="Lab Test Form.html" target="_blank">Lab Test</a></li>
+        </ul>
+      </nav>
+    </section>
+    <div id="img_section"></div>
+
+    <section class="main">
+      <h2>Covid Care</h2>
+      <div class="product">
+        <h4>Covid Test Kit</h4>
+        <img src="Images/Products/c1.jpg" alt="" />
+        <p>Rs. <span>40</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="product">
+        <h4>Covid Essentials</h4>
+        <img src="Images/Products/c2.jpg" alt="" />
+        <p>Rs. <span>240</span></p>
+        <p>Offer: Rs. <span>170</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+        <h4>Sanitizer Bottle</h4>
+        <img src="Images/Products/c3.jpg" alt="" />
+        <p>Rs. <span>99</span></p>
+        <p>Offer: Rs. <span>87</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+        <h4>Mask</h4>
+        <img src="Images/Products/c4.jpg" alt="" />
+        <p>Rs. <span>45</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+    </section>
+    <section class="main">
+      <h2>Diabetes Care</h2>
+
+      <div class="product">
+        <h4>BGR 34</h4>
+        <img src="Images/Products/d1.jpg" alt="" />
+        <p>Rs. <span>45</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+        <h4>Dabar Chyawanprakash</h4>
+        <img src="Images/Products/d2.jpg" alt="" />
+        <p>Rs. <span>45</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+        <h4>Colgate Sugarfree</h4>
+        <img src="Images/Products/d3.jpg" alt="" />
+        <p>Rs. <span>45</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+        <h4>Unibic Cookies Sugar free</h4>
+        <img src="Images/Products/d4.png" alt="" />
+        <p>Rs. <span>35</span></p>
+        <p>Offer: Rs. <span>30</span>/-</p>
+        <button>Add to cart</button>
+      </div>
+    </section>
+    <div id="foot">
+      <footer>
+        <p>&copy; Copyright. Only for demonstration purposes</p>
+      </footer>
+    </div>
+  </body>
+</html>
